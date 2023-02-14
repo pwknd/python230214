@@ -47,3 +47,30 @@ def intersect(prelist,postlist):
     return result
 # 호출 
 print(intersect("Ham","Spam"))
+
+
+
+#전역변수(불변)에 읽기+쓰기
+g=1
+def testScope(a):
+    #global g 
+    g = 2
+    return a+g
+#호출
+print(testScope(1))
+print("전역변수 g:",g)
+
+#가변형식
+wordlist = ["J","A","M"]
+def change(x):
+    #    x[0] = "h"
+    # 복사본 생성
+    x1 = x[:]
+    x1[0] = "H"
+
+    print("함수 내부:", x1)
+
+#호출(pass by reference, Call by reference)
+change(wordlist)
+print(wordlist)
+
