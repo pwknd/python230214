@@ -33,3 +33,23 @@ f = open("d:/work/demo.txt","rt", encoding="utf-8")
 result = f.read()
 print(result)
 f.close()
+
+print("-------------------------------------------------------------")
+
+#파일 읽기 
+f = open("d:/work/demo.txt","rt", encoding="utf-8")
+result = f.read()
+print(result)
+
+#어디쯤 읽고 있어?
+print( f.tell())
+
+#다시 처음으로 돌아가(리셋)
+f.seek(0)
+lst = f.readlines()
+#print(lst)
+for item in lst:
+    # print 함수는 end=""를 안쓰면 두번 줄바꿈.. 
+    print(item,end="")
+
+f.close()
