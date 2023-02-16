@@ -20,3 +20,16 @@ print("{0:e}".format(4/3))
 print("{0:f}".format(4/3))
 print("{0:.2f}".format(4/3))
 print("{0:,}".format(15000000))
+
+
+#파일 쓰기 
+
+f = open("d:\\work\\demo.txt","wt", encoding="utf-8")
+f.write("첫번째\n두번째\n세번째\n")
+f.close()
+
+#파일 읽기 
+f = open("d:/work/demo.txt","rt", encoding="utf-8")
+result = f.read()
+print(result)
+f.close()
